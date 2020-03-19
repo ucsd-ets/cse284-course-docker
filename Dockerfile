@@ -34,6 +34,6 @@ RUN jupyter nbextension disable --sys-prefix formgrader/main --section=tree
 RUN jupyter serverextension disable --sys-prefix nbgrader.server_extensions.formgrader
 RUN jupyter nbextension disable --sys-prefix create_assignment/main
 
-RUN rm /sources/*.tar.gz
-RUN rm /sources/*.zip
+#RUN rm /sources/*.tar.gz
+#RUN rm /sources/*.zip
 RUN rm -rf /opt/julia
