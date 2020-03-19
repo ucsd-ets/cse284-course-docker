@@ -34,6 +34,11 @@ RUN jupyter nbextension disable --sys-prefix formgrader/main --section=tree
 RUN jupyter serverextension disable --sys-prefix nbgrader.server_extensions.formgrader
 RUN jupyter nbextension disable --sys-prefix create_assignment/main
 
-#RUN rm /sources/*.tar.gz
-#RUN rm /sources/*.zip
+# Install course-specific software
+ADD install_cse284_tools.sh /sources/
+RUN chmod +x /sources/install_cse284_tools.sh
+RUN /sources/install_cse284_tools.sh
+
+RUN rm /sources/*.tar.gz
+RUN rm /sources/*.zip
 RUN rm -rf /opt/julia
