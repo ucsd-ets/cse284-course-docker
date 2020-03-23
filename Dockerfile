@@ -28,6 +28,11 @@ ADD install_cse284_tools.sh /sources/
 RUN chmod +x /sources/install_cse284_tools.sh
 RUN /sources/install_cse284_tools.sh
 
+# Install PS2 software
+ADD install_ps2_tools.sh /sources
+RUN chmod +x /sources/install_ps2_tools.sh
+RUN /sources/install_ps2_tools.sh
+
 RUN rm /sources/*.tar.gz
 RUN rm /sources/*.zip
 RUN rm -rf /opt/julia
