@@ -10,6 +10,7 @@ RUN apt-get update && apt-get -qq install -y \
     default-jdk \
     git \
     less \
+    libcurl4-openssl-dev libssl-dev \
     libbz2-dev \
     liblzma-dev \
     libncurses5 libncurses5-dev \
@@ -21,7 +22,7 @@ RUN apt-get update && apt-get -qq install -y \
 RUN mkdir /sources
 
 # Install extra python packages
-RUN pip install pyvcf
+RUN pip install pyvcf pysam brewer2mpl
 
 # Install course-specific software
 ADD install_cse284_tools.sh /sources/
