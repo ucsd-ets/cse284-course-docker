@@ -22,7 +22,7 @@ RUN apt-get update && apt-get -qq install -y \
 RUN mkdir /sources
 
 # Install extra python packages
-RUN pip install pyvcf pysam brewer2mpl
+RUN pip install pyvcf pysam brewer2mpl simplegeneric rpy2
 
 # Install course-specific software
 ADD install_cse284_tools.sh /sources/
