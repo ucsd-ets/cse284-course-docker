@@ -1,4 +1,4 @@
-FROM ucsdets/datascience-notebook:2019.4-stable
+FROM ucsdets/datascience-notebook:2021.1-stable
 
 MAINTAINER Melissa Gymrek <mgymrek@ucsd.edu>
 USER root
@@ -16,7 +16,8 @@ RUN apt-get update && apt-get -qq install -y \
     libncurses5 libncurses5-dev \
     r-base \
     vim \
-    zlib1g-dev
+    zlib1g-dev \
+    autoconf
 
 # Make sources directory
 RUN mkdir /sources
